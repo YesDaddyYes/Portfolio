@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
       rel="icon"
       href="https://cdn-icons-png.flaticon.com/512/5968/5968282.png"
     />
@@ -16,7 +20,8 @@
   <body>
     <header data-aos="fade-down">
       <nav class="navbar">
-        <h1 class="logo">Aditya Chande</h1>
+        <i class="ri-heart-fill"><h1 class="logo">Aditya Chande</h1></i>
+
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
           <li><a href="#skills">Skills</a></li>
@@ -27,71 +32,136 @@
           <li><a href="#contact">Contact</a></li>
         </ul>
         <div class="menu-toggle">☰</div>
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+          
+        </button>
       </nav>
     </header>
 
     <section class="hero" data-aos="fade-up">
+      <i class="ri-heart-fill"></i><i class="ri-heart-fill"></i
+      ><i class="ri-heart-fill"></i>
       <h2>Hi, I'm Aditya</h2>
-      <p>Aspiring Java Full Stack Developer | AI & Web Enthusiast</p>
+      <p>Aspiring Full Stack Developer</p>
       <a href="Aditya Chande.pdf" download class="btn">Download Resume</a>
       <button id="contactBtn">Hire Me</button>
     </section>
 
     <section id="about" data-aos="fade-up">
       <h2>About Me</h2>
-      <p>
-        I’m a passionate and detail-oriented MCA student at DES Navinchandra
-        Mehta Institute of Technology and Development, specializing in
-        Java-based web development and AI integration. I enjoy building scalable
-        applications with JSP, Servlets, and Spring Boot, integrating
-        intelligent solutions using APIs like OpenAI and Spring AI.
-      </p>
+      <div class="about-card" data-aos="fade-up">
+        <p>
+          I’m a passionate and detail-oriented MCA student at DES Navinchandra
+          Mehta Institute of Technology and Development, specializing in
+          Java-based web development and AI integration. I enjoy building
+          scalable applications with JSP, Servlets, and Spring Boot, integrating
+          intelligent solutions using APIs like OpenAI and Spring AI.
+        </p>
+      </div>
     </section>
 
     <section id="skills" data-aos="fade-up">
       <h2>Technical Skills</h2>
-      <div class="skills-container">
-        <div class="skill">Java</div>
-        <div class="skill">JSP & Servlets</div>
-        <div class="skill">Spring Boot</div>
-        <div class="skill">MySQL</div>
-        <div class="skill">RESTful APIs</div>
-        <div class="skill">OpenAI API</div>
-        <div class="skill">Firebase</div>
-        <div class="skill">Next.js</div>
-        <div class="skill">Tailwind CSS</div>
-        <div class="skill">HTML & CSS</div>
-      </div>
+      
+        
+        <div class="skills-container">
+          <div class="skill">
+            <img src="java.svg" alt="Java logo" /> Java
+          </div>
+          <div class="skill">
+            <img src="jsp.png" alt="JSP logo" /> JSP & Servlets
+          </div>
+          <div class="skill">
+            <img src="spring boot.png" alt="Spring Boot logo" /> Spring
+            Boot
+          </div>
+          <div class="skill">
+            <img src="mysql.png" alt="MySQL logo" /> MySQL
+          </div>
+          <div class="skill">
+            <img src="api.png" alt="RESTful API logo" /> RESTful APIs
+          </div>
+          <div class="skill">
+            <img src="openai.png" alt="OpenAI API logo" /> OpenAI API
+          </div>
+          <div class="skill">
+            <img src="firebase.png" alt="Firebase logo" /> Firebase
+          </div>
+          <div class="skill">
+            <img src="nextjs.png" alt="Next.js logo" /> Next.js
+          </div>
+          <div class="skill">
+            <img src="tailwind.png" alt="Tailwind CSS logo" /> Tailwind
+            CSS
+          </div>
+          <div class="skill">
+            <img src="htmlcss.jpeg" alt="HTML & CSS logo" /> HTML & CSS
+          </div>
+        </div>
+      </section>
     </section>
 
     <section id="projects" data-aos="fade-up">
       <h2>Projects</h2>
 
-      <div class="project-card" data-aos="fade-right">
+      
+        <!-- Search and Filter Controls -->
+  <div class="projects-controls" data-aos="fade-up">
+    <input id="projectSearch" type="text" placeholder="Search projects (name, tech)..." />
+    <div class="project-filters">
+      <button data-filter="all" class="active">All</button>
+      <button data-filter="web">Web</button>
+      <button data-filter="java">Java</button>
+      <button data-filter="ai">AI</button>
+    </div>
+  </div>
+
+
+      <div
+        class="project-card"
+        data-aos="fade-right"
+        data-tech="Next.js, Tailwind, Firebase, AI"
+      >
         <h3>AuraPrep – AI Mock Interview Platform</h3>
         <p>
           <strong>Tech:</strong> Next.js, Tailwind CSS, Firebase, Gemini API,
           Vercel
         </p>
         <ul>
-          <li>AI-powered platform for realistic mock interviews with feedback.</li>
-          <li>Integrated Firebase authentication and real-time data storage.</li>
+          <li>
+            AI-powered platform for realistic mock interviews with feedback.
+          </li>
+          <li>
+            Integrated Firebase authentication and real-time data storage.
+          </li>
         </ul>
       </div>
 
-      <div class="project-card" data-aos="fade-left">
+      <div
+        class="project-card"
+        data-aos="fade-left"
+        data-tech="JSP, Servlets, JDBC, MySQL, Java"
+      >
         <h3>Tikkit Portal</h3>
         <p><strong>Tech:</strong> JSP, Servlets, JDBC, MySQL</p>
         <ul>
-          <li>Ticket booking app supporting secure transactions and MVC pattern.</li>
+          <li>
+            Ticket booking app supporting secure transactions and MVC pattern.
+          </li>
         </ul>
       </div>
 
-      <div class="project-card" data-aos="fade-right">
+      <div
+        class="project-card"
+        data-aos="fade-right"
+        data-tech="Spring Boot, Spring AI, OpenAI, Java"
+      >
         <h3>Smart Research Assistant</h3>
         <p><strong>Tech:</strong> Spring Boot, Spring AI, OpenAI API</p>
         <ul>
-          <li>Developed AI-based assistant to automate research and summarization.</li>
+          <li>
+            Developed AI-based assistant to automate research and summarization.
+          </li>
         </ul>
       </div>
     </section>
@@ -124,23 +194,27 @@
 
     <section id="certifications" data-aos="fade-up">
       <h2>Certifications</h2>
-      <ul>
-        <li>Programming in Java – NPTEL (April 2024)</li>
-        <li>Essential RPA Professional – Automation Anywhere (July 2024)</li>
-        <li>Database Management System – SWAYAM INI (October 2024)</li>
-      </ul>
+      <div class="cer-card">
+        <ul>
+          <li>Programming in Java – NPTEL (April 2024)</li>
+          <li>Essential RPA Professional – Automation Anywhere (July 2024)</li>
+          <li>Database Management System – SWAYAM INI (October 2024)</li>
+        </ul>
+      </div>
     </section>
 
     <section id="contact" data-aos="fade-up">
       <h2>Contact</h2>
       <p>Mumbai, India</p>
-      <p>+91 7021297817 / 7304133547</p>
+      <i class="ri-numbers-fill">+91 7021297817 / 7304133547</i>
       <p>
+        <i class="ri-mail-send-line"></i>
         <a href="mailto:aditya.chande2001@gmail.com"
-          >aditya.chande2001@gmail.com</a>
+          >aditya.chande2001@gmail.com</a
+        >
       </p>
       <p>
-        🔗
+        <i class="ri-linkedin-fill"></i>
         <a
           href="https://www.linkedin.com/in/aditya-chande-775834235/"
           target="_blank"
@@ -151,7 +225,8 @@
       <form id="contact-form">
         <input type="text" id="name" placeholder="Your Name" required />
         <input type="email" id="email" placeholder="Your Email" required />
-        <textarea id="message" placeholder="Your Message" required></textarea>
+        <input type="text" id="message" placeholder="Your Message" required/>
+        <input type="number" id="number" placeholder="Contact Details" required/>
         <button type="submit">Send Message</button>
       </form>
     </section>
@@ -160,9 +235,22 @@
       <p>© 2025 Aditya Chande | Made using HTML, CSS & JS</p>
     </footer>
 
-    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="script.js"></script>
+
+    <!-- Project Detail Modal -->
+    <div id="projectModal" class="modal" aria-hidden="true">
+      <div class="modal-inner">
+        <button class="modal-close" aria-label="Close">×</button>
+        <h3 id="modalTitle"></h3>
+        <p id="modalDesc"></p>
+        <p><strong>Tech Stack:</strong> <span id="modalTech"></span></p>
+        <div class="modal-links">
+          <a id="modalDemo" target="_blank" rel="noopener">Live Demo</a>
+          <a id="modalRepo" target="_blank" rel="noopener">View Code</a>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
